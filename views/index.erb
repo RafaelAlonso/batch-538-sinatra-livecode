@@ -1,0 +1,16 @@
+<h1>Bem vindo aos restaurantes tops do #538</h1>
+
+<h2>Crie o seu restaurante:</h2>
+<form action="/create_restaurant">
+  Nome do restaurante: <input type="text" name='name'>
+  Tipo de comida: <input type="text" name="category">
+  Endereço: <input type="text" name="address">
+  <input type="submit">
+</form>
+
+
+<ul>
+  <% @restaurants.each do |restaurant| %>
+    <li> <a href="/show/<%= restaurant.id %>"> <%= restaurant.name %> </a> </li>
+  <% end %>
+</ul>
